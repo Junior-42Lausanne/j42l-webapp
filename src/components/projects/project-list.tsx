@@ -1,9 +1,9 @@
-import { projects } from "@/fake-data/projects";
+import type { Project } from "@/lib/types";
 import ProjectCard from "./project-card";
 import Pagination from "../pagination";
 
 type ProjectListProps = {
-	projects: typeof projects;
+	projects: Project[];
 };
 
 const ProjectList = ({ projects }: ProjectListProps) => {

@@ -22,7 +22,10 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
 	return (
-		<Link href="#" className="focus:outline-none">
+		<Link
+			href={`/authenticated/projects/${project.id}`}
+			className="focus:outline-none"
+		>
 			<Card className="hover:border-primary bg-card/80 border-2 border-transparent transition-shadow duration-200 hover:shadow-lg">
 				<CardHeader>
 					<CardTitle className="flex items-center gap-2 text-lg font-semibold">
