@@ -2,7 +2,7 @@ import { projects } from "@/fake-data/projects";
 import ProjectList from "../../../components/projects/project-list";
 import ProjectSearch from "@/components/projects/project-search";
 
-export default function ProjectListPage() {
+const ProjectListPage = async () => {
 	return (
 		<div className="min-h-screen bg-white px-8 py-10">
 			<div className="mb-10">
@@ -16,4 +16,6 @@ export default function ProjectListPage() {
 			<ProjectList projects={projects} />
 		</div>
 	);
-}
+};
+
+export default ProjectListPage;

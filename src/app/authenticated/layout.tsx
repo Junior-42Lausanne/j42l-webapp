@@ -1,14 +1,13 @@
 import AuthenticatedHeader from "@/components/header/AuthenticatedHeader";
+import React from "react";
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: React.PropsWithChildren) => {
 	return (
-		<>
+		<div className="min-h-screen">
 			<AuthenticatedHeader />
 			<main className="mx-auto max-w-3xl">{children}</main>
-		</>
+		</div>
 	);
-}
+};
+
+export default RootLayout;

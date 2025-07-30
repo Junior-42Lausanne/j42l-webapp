@@ -2,11 +2,11 @@ import ProjectPositions from "@/components/projects/project-positions";
 import { projects } from "@/fake-data/projects";
 import { notFound } from "next/navigation";
 
-export default async function ProjectDetailsPage({
+const ProjectDetailsPage = async ({
 	params,
 }: {
 	params: Promise<{ projectId: string }>;
-}) {
+}) => {
 	const { projectId } = await params;
 	const project = projects.find(
 		(project) => project.id === Number(projectId),
@@ -34,4 +34,6 @@ export default async function ProjectDetailsPage({
 			</div>
 		</div>
 	);
-}
+};
+
+export default ProjectDetailsPage;
