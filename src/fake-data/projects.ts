@@ -11,7 +11,7 @@ export const projects = [
 				description:
 					"Develop and maintain user-facing features using React, ensuring responsive design and optimal performance.",
 				skills: ["react", "javascript", "html", "css"],
-				applied: true,
+				applicationStatus: null,
 			},
 			{
 				id: 2,
@@ -19,7 +19,7 @@ export const projects = [
 				description:
 					"Design and implement scalable backend services and APIs using Node.js, with a focus on reliability and security.",
 				skills: ["node.js", "express", "mongodb", "docker"],
-				applied: false,
+				applicationStatus: "ongoing",
 			},
 		],
 		documents: [
@@ -40,7 +40,7 @@ export const projects = [
 				description:
 					"Work across the stack to build and integrate both frontend and backend components for a seamless user experience.",
 				skills: ["javascript", "react", "node.js", "sql"],
-				applied: false,
+				applicationStatus: "rejected",
 			},
 			{
 				id: 4,
@@ -53,7 +53,7 @@ export const projects = [
 					"prototyping",
 					"accessibility",
 				],
-				applied: false,
+				applicationStatus: "accepted",
 			},
 		],
 		documents: [

@@ -1,7 +1,23 @@
+import PageTitle from "@/components/shared/page-title";
+import ApplicationFilterButton from "./application-filter-button";
+import Pagination from "@/components/pagination";
+import ApplicationList from "./application-list";
+
 export default function MyApplicationsPage() {
-  return (
-    <div>
-      <h1 className="text-xl">My applications page</h1>
-    </div>
-  );
+	return (
+		<div>
+			<PageTitle title="My applications">
+				The list of positions that you have applied to
+			</PageTitle>
+			<div className="mt-8">
+				<div className="flex justify-end">
+					<ApplicationFilterButton />
+				</div>
+				<div className="mt-4">
+					<ApplicationList />
+				</div>
+				<Pagination />
+			</div>
+		</div>
+	);
 }

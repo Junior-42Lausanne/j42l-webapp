@@ -2,19 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Circle } from "lucide-react";
 import Link from "next/link";
-
-interface Job {
-	id: number;
-	title: string;
-	applied: boolean;
-}
-
-interface Project {
-	id: number;
-	title: string;
-	description: string;
-	jobs: Job[];
-}
+import { Project } from "@/lib/types";
 
 interface ProjectCardProps {
 	project: Project;
@@ -43,15 +31,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 								className="flex items-center justify-between rounded-lg border bg-white/80 px-3 py-2 shadow-sm"
 							>
 								<span className="flex items-center gap-2">
-									{job.applied ? (
+									{job.applicationStatus !== null ? (
 										<CheckCircle className="h-4 w-4 text-green-500" />
 									) : (
 										<Circle className="h-4 w-4 text-gray-300" />
 									)}
 									{job.title}
 								</span>
-								{job.applied && (
-									<Badge variant="secondary">applied</Badge>
+								{job.applicationStatus !== null && (
+									<Badge variant="secondary">
+										applied ({job.applicationStatus})
+									</Badge>
 								)}
 							</li>
 						))}
