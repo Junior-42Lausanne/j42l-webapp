@@ -22,6 +22,11 @@ export const projects = [
 				applied: false,
 			},
 		],
+		documents: [
+			{ id: 1, name: "Requirements Specification.pdf" },
+			{ id: 2, name: "Wireframes.zip" },
+			{ id: 3, name: "API Documentation.docx" },
+		],
 	},
 	{
 		id: 2,
@@ -50,6 +55,10 @@ export const projects = [
 				],
 				applied: false,
 			},
+		],
+		documents: [
+			{ id: 1, name: "System Architecture.pdf" },
+			{ id: 2, name: "User Flow Diagrams.png" },
 		],
 	},
 ];
