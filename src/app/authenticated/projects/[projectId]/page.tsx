@@ -1,4 +1,5 @@
 import ProjectPositions from "@/components/projects/project-positions";
+import PageTitle from "@/components/shared/page-title";
 import { projects } from "@/fake-data/projects";
 import { notFound } from "next/navigation";
 
@@ -18,14 +19,7 @@ const ProjectDetailsPage = async ({
 
 	return (
 		<div>
-			<div className="mb-10">
-				<h1 className="text-primary text-3xl font-bold">
-					{project.title}
-				</h1>
-				<p className="text-muted-foreground mt-2 italic">
-					{project.description}
-				</p>
-			</div>
+			<PageTitle title={project.title}>{project.description}</PageTitle>
 			<div className="mt-10">
 				<h2 className="text-primary text-xl font-bold">
 					Project Positions

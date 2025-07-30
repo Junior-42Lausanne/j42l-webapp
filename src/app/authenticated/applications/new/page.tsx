@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import ProjectDescription from "./project-description";
 import JobDescription from "./job-description";
 import JobApplicationForm from "./job-application-form";
+import PageTitle from "@/components/shared/page-title";
 
 type NewApplicationPageProps = {
 	searchParams: Promise<{ job: string }>;
@@ -28,14 +29,9 @@ const NewApplicationPage = async ({
 
 	return (
 		<div className="mb-8">
-			<div className="mb-10">
-				<h1 className="text-primary text-3xl font-bold">
-					New job application
-				</h1>
-				<p className="text-muted-foreground mt-2 italic">
-					Apply to a job position
-				</p>
-			</div>
+			<PageTitle title="New job application">
+				Apply to a job position
+			</PageTitle>
 			<div className="space-y-8">
 				<ProjectDescription project={project} />
 				<JobDescription job={job} />
