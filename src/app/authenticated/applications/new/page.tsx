@@ -29,9 +29,10 @@ const NewApplicationPage = async ({
 
 	return (
 		<div className="mb-8">
-			<PageTitle title="New job application">
-				Apply to a job position
-			</PageTitle>
+			<PageTitle
+				title="New job application"
+				description="Apply to a job position"
+			/>
 			<div className="space-y-8">
 				<ProjectDescription project={project} />
 				<JobDescription job={job} />

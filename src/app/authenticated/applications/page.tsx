@@ -6,9 +6,10 @@ import ApplicationList from "./application-list";
 export default function MyApplicationsPage() {
 	return (
 		<div>
-			<PageTitle title="My applications">
-				The list of positions that you have applied to
-			</PageTitle>
+			<PageTitle
+				title="My applications"
+				description="The list of positions that you have applied to"
+			/>
 			<div className="mt-8">
 				<div className="flex justify-end">
 					<ApplicationFilterButton />

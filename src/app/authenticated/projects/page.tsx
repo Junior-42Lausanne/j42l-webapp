@@ -6,9 +6,10 @@ import PageTitle from "@/components/shared/page-title";
 const ProjectListPage = async () => {
 	return (
 		<div className="min-h-screen bg-white px-8 py-10">
-			<PageTitle title="Projects">
-				Search for open projects and explore available opportunities.
-			</PageTitle>
+			<PageTitle
+				title="Projects"
+				description="Search for open projects and explore available opportunities."
+			/>
 			<ProjectSearch className="mb-4" />
 			<ProjectList projects={projects} />
 		</div>

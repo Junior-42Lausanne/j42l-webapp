@@ -19,7 +19,10 @@ const ProjectDetailsPage = async ({
 
 	return (
 		<div>
-			<PageTitle title={project.title}>{project.description}</PageTitle>
+			<PageTitle
+				title={project.title}
+				description={project.description}
+			/>
 			<div className="mt-10">
 				<h2 className="text-primary text-xl font-bold">
 					Project Positions
