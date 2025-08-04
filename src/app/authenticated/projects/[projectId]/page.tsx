@@ -1,7 +1,9 @@
 import ProjectPositions from "@/components/projects/project-positions";
 import PageTitle from "@/components/shared/page-title";
+import { Button } from "@/components/ui/button";
 import { projects } from "@/fake-data/projects";
 import { File } from "lucide-react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const ProjectDetailsPage = async ({
@@ -20,10 +22,14 @@ const ProjectDetailsPage = async ({
 
 	return (
 		<div>
-			<PageTitle
-				title={project.title}
-				description={project.description}
-			/>
+			<PageTitle title={project.title} description={project.description}>
+				{/* Only show button for junior members or junior admins */}
+				<Button asChild>
+					<Link href={`/authenticated/projects/${projectId}/edit`}>
+						Edit
+					</Link>
+				</Button>
+			</PageTitle>
 			<div className="mt-10">
 				<h2 className="text-primary text-xl font-bold">Documents</h2>
 				<ul className="mt-2 flex gap-2">
