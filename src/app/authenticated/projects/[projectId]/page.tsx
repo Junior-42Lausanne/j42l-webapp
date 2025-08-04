@@ -1,6 +1,7 @@
 import ProjectPositions from "@/components/projects/project-positions";
 import PageTitle from "@/components/shared/page-title";
 import { projects } from "@/fake-data/projects";
+import { File } from "lucide-react";
 import { notFound } from "next/navigation";
 
 const ProjectDetailsPage = async ({
@@ -23,6 +24,23 @@ const ProjectDetailsPage = async ({
 				title={project.title}
 				description={project.description}
 			/>
+			<div className="mt-10">
+				<h2 className="text-primary text-xl font-bold">Documents</h2>
+				<ul className="mt-2 flex gap-2">
+					<li className="flex cursor-pointer items-center gap-1 rounded bg-gray-200 px-4 py-1 text-sm hover:bg-gray-300">
+						<File className="size-4" />
+						Project brief
+					</li>
+					<li className="flex cursor-pointer items-center gap-1 rounded bg-gray-200 px-4 py-1 text-sm hover:bg-gray-300">
+						<File className="size-4" />
+						Wireframes
+					</li>
+					<li className="flex cursor-pointer items-center gap-1 rounded bg-gray-200 px-4 py-1 text-sm hover:bg-gray-300">
+						<File className="size-4" />
+						User flow
+					</li>
+				</ul>
+			</div>
 			<div className="mt-10">
 				<h2 className="text-primary text-xl font-bold">
 					Project Positions
