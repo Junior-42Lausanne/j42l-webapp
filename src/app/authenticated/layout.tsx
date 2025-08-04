@@ -1,4 +1,4 @@
-import AuthenticatedHeader from "@/components/header/AuthenticatedHeader";
+import AuthenticatedHeader from "@/components/header/authenticated-header";
 import React from "react";
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
