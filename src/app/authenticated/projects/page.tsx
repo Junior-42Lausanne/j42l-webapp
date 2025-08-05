@@ -2,6 +2,8 @@ import { projects } from "@/fake-data/projects";
 import ProjectList from "../../../components/projects/project-list";
 import ProjectSearch from "@/components/projects/project-search";
 import PageTitle from "@/components/shared/page-title";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ProjectListPage = async () => {
 	return (
@@ -9,7 +11,12 @@ const ProjectListPage = async () => {
 			<PageTitle
 				title="Projects"
 				description="Search for open projects and explore available opportunities."
-			/>
+			>
+				{/* Button visible only for junior admin and jumior members */}
+				<Button asChild>
+					<Link href="/authenticated/projects/create">Create</Link>
+				</Button>
+			</PageTitle>
 			<ProjectSearch className="mb-4" />
 			<ProjectList projects={projects} />
 		</div>
