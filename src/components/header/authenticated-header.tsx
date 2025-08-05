@@ -28,6 +28,9 @@ const AuthenticatedHeader = () => {
 						My Applications
 					</Link>
 				</Button>
+				<Button asChild variant="ghost">
+					<Link href="/authenticated/users">Users</Link>
+				</Button>
 			</div>
 			<div>
 				<DropdownMenu>
