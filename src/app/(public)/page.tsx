@@ -24,7 +24,7 @@ const HomePage = () => {
 						/>
 					</div>
 					<CardTitle className="text-center text-2xl font-semibold">
-						Junior Projects Portal
+						Junior Projects Recruitment Portal
 					</CardTitle>
 					<CardDescription className="text-center text-lg">
 						This application is designed for students and members of
