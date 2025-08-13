@@ -25,9 +25,7 @@ const ProjectDetailsPage = async ({
 			<PageTitle title={project.title} description={project.description}>
 				{/* Only show button for junior members or junior admins */}
 				<Button asChild>
-					<Link href={`/authenticated/projects/${projectId}/edit`}>
-						Edit
-					</Link>
+					<Link href={`/projects/${projectId}/edit`}>Edit</Link>
 				</Button>
 			</PageTitle>
 			<div className="mt-10">

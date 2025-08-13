@@ -14,7 +14,7 @@ const ProjectListPage = async () => {
 			>
 				{/* Button visible only for junior admin and jumior members */}
 				<Button asChild>
-					<Link href="/authenticated/projects/create">Create</Link>
+					<Link href="/projects/create">Create</Link>
 				</Button>
 			</PageTitle>
 			<ProjectSearch className="mb-4" />

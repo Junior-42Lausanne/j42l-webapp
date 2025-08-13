@@ -8,31 +8,49 @@ import { projects } from "@/fake-data/projects";
 import { FileUp, PlusCircle } from "lucide-react";
 import { redirect } from "next/navigation";
 
-const CreateProjectPage = async ({}: {}) => {
+const EditProjectPage = async ({
+	params,
+}: {
+	params: Promise<{ projectId: string }>;
+}) => {
 	// Authenticate user as junior member or junior admin
+
+	const { projectId } = await params;
+
+	if (!projectId) {
+		redirect("/projects");
+	}
+
+	const selectedProjects = projects.filter((p) => p.id === Number(projectId));
+
+	if (!selectedProjects.length) {
+		redirect("/projects");
+	}
+
+	const project = selectedProjects[0];
 
 	async function submit() {
 		"use server";
 
-		redirect(`/authenticated/projects/1`);
+		redirect(`/projects/${projectId}`);
 	}
 
 	return (
 		<div>
-			<PageTitle title="Create project" />
+			<PageTitle title="Edit project" />
 
 			<form action={submit} className="flex flex-col gap-8">
 				<div className="flex flex-col gap-4">
 					<h2 className="text-xl font-bold">Basic info</h2>
 					<div className="flex flex-col gap-2">
 						<Label className="font-semibold">Project Name</Label>
-						<Input />
+						<Input defaultValue={project.title} />
 					</div>
 					<div className="flex flex-col gap-2">
 						<Label className="font-semibold">
 							Project Description
 						</Label>
-						<Textarea />
+						<Textarea defaultValue={project.description} />
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">
@@ -77,4 +95,4 @@ const CreateProjectPage = async ({}: {}) => {
 	);
 };
 
-export default CreateProjectPage;
+export default EditProjectPage;

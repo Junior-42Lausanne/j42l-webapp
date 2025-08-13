@@ -16,13 +16,13 @@ const NewApplicationPage = async ({
 	const { job: jobId } = await searchParams;
 
 	if (!jobId) {
-		redirect("/authenticated/projects");
+		redirect("/projects");
 	}
 
 	const projectAndJob = getProjectAndJobFromJobId(Number(jobId));
 
 	if (!projectAndJob) {
-		redirect("/authenticated/projects");
+		redirect("/projects");
 	}
 
 	const { project, job } = projectAndJob;

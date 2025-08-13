@@ -57,9 +57,7 @@ const JobCard = ({ job }: JobCardProps) => {
 				variant="default"
 				size="sm"
 			>
-				<Link href={`/authenticated/applications/new?job=${job.id}`}>
-					Apply
-				</Link>
+				<Link href={`/applications/new?job=${job.id}`}>Apply</Link>
 			</Button>
 		</Card>
 	);

@@ -46,9 +46,7 @@ const HomePage = () => {
 						size="lg"
 						className="px-8 py-3 text-base font-semibold"
 					>
-						<Link href="/authenticated/projects">
-							Sign in with 42 Network
-						</Link>
+						<Link href="/projects">Sign in with 42 Network</Link>
 					</Button>
 				</CardFooter>
 			</Card>

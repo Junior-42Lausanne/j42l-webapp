@@ -11,7 +11,7 @@ const EditProfilePage = () => {
 	async function submit() {
 		"use server";
 
-		redirect("/authenticated/profile");
+		redirect("/profile");
 	}
 
 	return (
@@ -59,7 +59,7 @@ const EditProfilePage = () => {
 				<div className="flex gap-2">
 					<Button>Submit</Button>
 					<Button asChild variant="outline" type="button">
-						<Link href="/authenticated/profile">Cancel</Link>
+						<Link href="/profile">Cancel</Link>
 					</Button>
 				</div>
 			</form>

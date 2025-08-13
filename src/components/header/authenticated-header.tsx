@@ -21,15 +21,13 @@ const AuthenticatedHeader = () => {
 		<BaseHeader>
 			<div className="flex items-center gap-4">
 				<Button asChild variant="ghost">
-					<Link href="/authenticated/projects">Projects</Link>
+					<Link href="/projects">Projects</Link>
 				</Button>
 				<Button asChild variant="ghost">
-					<Link href="/authenticated/applications">
-						My Applications
-					</Link>
+					<Link href="/applications">My Applications</Link>
 				</Button>
 				<Button asChild variant="ghost">
-					<Link href="/authenticated/users">Users</Link>
+					<Link href="/users">Users</Link>
 				</Button>
 			</div>
 			<div>
@@ -41,10 +39,7 @@ const AuthenticatedHeader = () => {
 					</DropdownMenuTrigger>
 					<DropdownMenuContent>
 						<DropdownMenuItem asChild>
-							<Link
-								href="/authenticated/profile"
-								className="w-full"
-							>
+							<Link href="/profile" className="w-full">
 								Profile
 							</Link>
 						</DropdownMenuItem>

@@ -18,7 +18,7 @@ const JobApplicationForm = ({
 	async function submit() {
 		"use server";
 
-		redirect("/authenticated/applications");
+		redirect("/applications");
 	}
 
 	return (

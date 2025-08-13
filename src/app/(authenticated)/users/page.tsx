@@ -16,7 +16,7 @@ const UserListPage = () => {
 			<div className="mt-4">
 				<ul className="divide-y border-t border-b">
 					<Link
-						href="/authenticated/users/1"
+						href="/users/1"
 						className="block px-4 py-4 hover:bg-gray-100"
 					>
 						<li className="flex justify-between">
@@ -30,7 +30,7 @@ const UserListPage = () => {
 						</li>
 					</Link>
 					<Link
-						href="/authenticated/users/1"
+						href="/users/1"
 						className="block px-4 py-4 hover:bg-gray-100"
 					>
 						<li>Jane Hamilton</li>

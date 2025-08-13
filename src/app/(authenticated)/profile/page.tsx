@@ -8,7 +8,7 @@ const SelfProfilePage = () => {
 		<div>
 			<PageTitle title="Profile Page">
 				<Button asChild>
-					<Link href="/authenticated/profile/edit">Edit</Link>
+					<Link href="/profile/edit">Edit</Link>
 				</Button>
 			</PageTitle>
 
