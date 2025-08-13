@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Project } from "@/lib/types";
+import { Project } from "@/types/types";
 
 type ProjectDescriptionProps = {
 	project: Project;

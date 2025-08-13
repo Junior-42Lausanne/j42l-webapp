@@ -1,5 +1,5 @@
 import { projects } from "@/fake-data/projects";
-import { Job, Project } from "@/lib/types";
+import { Job, Project } from "@/types/types";
 import { redirect } from "next/navigation";
 import ProjectDescription from "./project-description";
 import JobDescription from "./job-description";

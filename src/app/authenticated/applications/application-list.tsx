@@ -6,10 +6,10 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { projects } from "@/fake-data/projects";
-import { Job, Project } from "@/lib/types";
+import { Job, Project } from "@/types/types";
 import JobApplicationForm from "./new/job-application-form";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 
 const ApplicationList = () => {
 	const applications = getApplicationList();

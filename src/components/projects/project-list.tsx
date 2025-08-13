@@ -1,4 +1,4 @@
-import type { Project } from "@/lib/types";
+import type { Project } from "@/types/types";
 import ProjectCard from "./project-card";
 import Pagination from "../pagination";
 

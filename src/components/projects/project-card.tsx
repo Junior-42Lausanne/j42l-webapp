@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Circle } from "lucide-react";
 import Link from "next/link";
-import { Project } from "@/lib/types";
+import { Project } from "@/types/types";
 
 interface ProjectCardProps {
 	project: Project;

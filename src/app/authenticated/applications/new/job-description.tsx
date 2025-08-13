@@ -1,4 +1,4 @@
-import { Job } from "@/lib/types";
+import { Job } from "@/types/types";
 
 type JobDescriptionProps = {
 	job: Job;

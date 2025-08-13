@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 import {
 	Card,
 	CardContent,
@@ -9,7 +9,7 @@ import {
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Job, Project } from "@/lib/types";
+import { Job, Project } from "@/types/types";
 
 type ProjectPositionsProps = {
 	project: Project;

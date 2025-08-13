@@ -3,7 +3,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Job } from "@/lib/types";
+import { Job } from "@/types/types";
 import { redirect } from "next/navigation";
 
 type JobApplicationFormProps = {
