@@ -5,7 +5,6 @@ import { Input } from "../../../components/ui/input";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
-	DropdownMenuItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "../../../components/ui/dropdown-menu";
@@ -13,7 +12,7 @@ import { Button } from "../../../components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { Badge } from "../../../components/ui/badge";
 
-const ProjectSearch = ({ className = "" }) => {
+const ProjectSearchBar = ({ className = "" }) => {
 	return (
 		<div className={cn("gap-2, flex", className)}>
 			<Input className="flex-1 rounded-r-none" placeholder="Search" />
@@ -44,4 +43,4 @@ const ProjectSearch = ({ className = "" }) => {
 	);
 };
 
-export default ProjectSearch;
+export default ProjectSearchBar;

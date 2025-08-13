@@ -1,9 +1,10 @@
 import { projects } from "@/fake-data/projects";
-import ProjectList from "../../../features/projects/components/project-list";
-import ProjectSearch from "@/features/projects/components/project-search";
+import ProjectSearchBar from "@/features/projects/components/project-search-bar";
 import PageTitle from "@/components/shared/page-title";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ProjectCard from "@/features/projects/components/project-card";
+import Pagination from "@/components/pagination";
 
 const ProjectListPage = async () => {
 	return (
@@ -17,8 +18,13 @@ const ProjectListPage = async () => {
 					<Link href="/projects/create">Create</Link>
 				</Button>
 			</PageTitle>
-			<ProjectSearch className="mb-4" />
-			<ProjectList projects={projects} />
+			<ProjectSearchBar className="mb-4" />
+			<div className="mt-4 flex flex-col gap-8">
+				{projects.map((project) => (
+					<ProjectCard key={project.id} project={project} />
+				))}
+			</div>
+			<Pagination />
 		</div>
 	);
 };
