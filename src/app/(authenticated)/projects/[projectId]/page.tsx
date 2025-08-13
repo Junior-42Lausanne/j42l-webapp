@@ -1,4 +1,4 @@
-import ProjectPositions from "@/components/projects/project-positions";
+import ProjectPositions from "@/features/projects/components/project-positions";
 import PageTitle from "@/components/shared/page-title";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/fake-data/projects";

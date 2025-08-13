@@ -1,6 +1,6 @@
 import { projects } from "@/fake-data/projects";
-import ProjectList from "../../../components/projects/project-list";
-import ProjectSearch from "@/components/projects/project-search";
+import ProjectList from "../../../features/projects/components/project-list";
+import ProjectSearch from "@/features/projects/components/project-search";
 import PageTitle from "@/components/shared/page-title";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

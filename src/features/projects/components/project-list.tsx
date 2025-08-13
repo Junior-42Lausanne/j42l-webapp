@@ -1,6 +1,6 @@
 import type { Project } from "@/types/types";
 import ProjectCard from "./project-card";
-import Pagination from "../pagination";
+import Pagination from "../../../components/pagination";
 
 type ProjectListProps = {
 	projects: Project[];

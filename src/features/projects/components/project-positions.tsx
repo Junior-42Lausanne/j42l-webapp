@@ -5,9 +5,9 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "../ui/card";
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
+} from "../../../components/ui/card";
+import { Badge } from "../../../components/ui/badge";
+import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import { Job, Project } from "@/types/types";
 

@@ -1,17 +1,17 @@
 "use client";
 
 import { cn } from "@/utils/utils";
-import { Input } from "../ui/input";
+import { Input } from "../../../components/ui/input";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { Button } from "../ui/button";
+} from "../../../components/ui/dropdown-menu";
+import { Button } from "../../../components/ui/button";
 import { ChevronDown } from "lucide-react";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../../components/ui/badge";
 
 const ProjectSearch = ({ className = "" }) => {
 	return (
