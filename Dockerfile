@@ -16,5 +16,5 @@ EXPOSE 3000
 
 USER node
 
-CMD [ "npm run dev"] # TODO change to prod
+CMD [ "npm", "run", "dev"] # TODO change to prod
 
