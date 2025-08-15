@@ -1,20 +1,30 @@
 FROM node:24.5-alpine3.21
 
+# Optional: for some Next.js dependencies
+# RUN apk add --no-cache libc6-compat
+
 WORKDIR /usr/app
 
+# Copy package files as root
 COPY ./package*.json ./
 
-RUN npm install
-
+# Give ownership of the workdir (and package files) to the node user
 RUN chown -R node:node /usr/app
 
-COPY ./ ./
+# Switch to the node user before installing
+USER node
 
-# RUN npm run build TODO activate for prod
+# Install all dependencies (including devDependencies for testing)
+RUN npm install
+
+# Copy the rest of the application with correct ownership
+COPY --chown=node:node ./ ./
 
 EXPOSE 3000
 
-USER node
+# Dev mode for testing
+CMD ["npm", "run", "dev"]
 
-CMD [ "npm run dev"] # TODO change to prod
-
+# --- For production later ---
+# RUN npm run build
+# CMD ["npm", "start"]
