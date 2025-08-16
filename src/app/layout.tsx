@@ -15,10 +15,6 @@ export default function RootLayout({
 		<html lang="en">
 			<body className="antialiased">
 				<div className="max-w-3xl mx-auto">
-					<header>
-						<a href="#">Projects</a>
-						<a href="#">Applications</a>
-					</header>
 					{children}
 				</div>
 			</body>
