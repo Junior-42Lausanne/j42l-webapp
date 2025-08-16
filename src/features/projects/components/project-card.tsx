@@ -5,6 +5,7 @@ import {
 	CardTitle,
 	CardFooter
 } from '@/components/ui/card';
+
 import { User } from 'lucide-react';
 import ProjectPositionSampleCard from './project-position-sample-card';
 

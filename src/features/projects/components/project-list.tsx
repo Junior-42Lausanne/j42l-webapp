@@ -7,7 +7,9 @@ const ProjectList = () => {
 			<Link href={`/projects/1`}>
 				<ProjectCard />
 			</Link>
-			<ProjectCard />
+			<Link href={`/projects/2`}>
+				<ProjectCard />
+			</Link>
 		</div>
 	);
 };
