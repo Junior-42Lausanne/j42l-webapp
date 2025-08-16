@@ -13,7 +13,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="antialiased">{children}</body>
+			<body className="antialiased">
+				<div className="max-w-3xl mx-auto">
+					<header>
+						<a href="#">Projects</a>
+						<a href="#">Applications</a>
+					</header>
+					{children}
+				</div>
+			</body>
 		</html>
 	);
 }
