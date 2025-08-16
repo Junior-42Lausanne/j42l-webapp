@@ -1,4 +1,4 @@
-import { ColumnType, Insertable, Selectable, Updateable } from 'kysely';
+import { ColumnType, Generated, Insertable, Selectable, Updateable } from 'kysely';
 
 export interface Database {
 	user: UserTable;
@@ -14,7 +14,7 @@ export interface UserTable {
 	emailVerified: boolean;
 	image: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with user data
@@ -30,7 +30,7 @@ export interface SessionTable {
 	ipAddress: string | null;
 	userAgent: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with session data
@@ -51,7 +51,7 @@ export interface AccountTable {
 	idToken: string | null;
 	password: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with account data
@@ -65,7 +65,7 @@ export interface VerificationTable {
 	value: string;
 	expiresAt: ColumnType<Date, string | undefined, never>;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with verification data
@@ -74,16 +74,32 @@ export type NewVerification = Insertable<VerificationTable>;
 export type VerificationUpdate = Updateable<VerificationTable>;
 
 export interface JuniorTable {
-	id: string;
+	id: Generated<string>;
 	schoolIdentifier: string;
 	name: string;
 	description: string;
 	image: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with junior data
 export type Junior = Selectable<JuniorTable>;
 export type NewJunior = Insertable<JuniorTable>;
 export type JuniorUpdate = Updateable<JuniorTable>;
+
+export interface ProjectTable {
+	id: Generated<string>;
+	juniorId: string;
+	name: string;
+	description: string;
+	status: string;
+	createdAt: ColumnType<Date, string | undefined, never>;
+	createdBy: string;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
+}
+
+// Utility types for working with project data
+export type Project = Selectable<ProjectTable>;
+export type NewProject = Insertable<ProjectTable>;
+export type ProjectUpdate = Updateable<ProjectTable>;
