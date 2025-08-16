@@ -1,10 +1,11 @@
 import { betterAuth } from "better-auth";
 import { genericOAuth } from "better-auth/plugins";
+import { nextCookies } from "better-auth/next-js";
 import { Pool } from "pg";
 
 export const auth = betterAuth({
 	database: new Pool({
-		connectionString: `postgresql://some_db_user:some_db_password@localhost:5432/some_db_name`, // TODO: use env variable
+		connectionString: `postgresql://some_db_user:some_db_password@db:5432/some_db_name`, // TODO: use env variable
 	}),
 	account: {
 		accountLinking: {
@@ -40,5 +41,6 @@ export const auth = betterAuth({
 				},
 			],
 		}),
+		nextCookies(),
 	],
 });
