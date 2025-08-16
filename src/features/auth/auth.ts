@@ -6,6 +6,12 @@ export const auth = betterAuth({
 	database: new Pool({
 		connectionString: `postgresql://some_db_user:some_db_password@localhost:5432/some_db_name`, // TODO: use env variable
 	}),
+	account: {
+		accountLinking: {
+			enabled: true,
+			trustedProviders: ["42-school"],
+		},
+	},
 	plugins: [
 		genericOAuth({
 			config: [
