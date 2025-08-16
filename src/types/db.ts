@@ -5,6 +5,9 @@ export interface Database {
 	session: SessionTable;
 	account: AccountTable;
 	verification: VerificationTable;
+	junior: JuniorTable;
+	project: ProjectTable;
+	projectPosition: ProjectPositionTable;
 }
 
 export interface UserTable {
@@ -95,7 +98,7 @@ export interface ProjectTable {
 	description: string;
 	status: string;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	createdBy: string;
+	createdBy: string | null;
 	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
@@ -103,3 +106,18 @@ export interface ProjectTable {
 export type Project = Selectable<ProjectTable>;
 export type NewProject = Insertable<ProjectTable>;
 export type ProjectUpdate = Updateable<ProjectTable>;
+
+export interface ProjectPositionTable {
+	id: Generated<string>;
+	projectId: string;
+	name: string;
+	description: string;
+	count: number;
+	createdAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
+}
+
+// Utility types for working with project position data
+export type ProjectPosition = Selectable<ProjectPositionTable>;
+export type NewProjectPosition = Insertable<ProjectPositionTable>;
+export type ProjectPositionUpdate = Updateable<ProjectPositionTable>;
