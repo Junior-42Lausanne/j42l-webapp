@@ -14,7 +14,7 @@ export interface UserTable {
 	emailVerified: boolean;
 	image: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with user data
@@ -30,7 +30,7 @@ export interface SessionTable {
 	ipAddress: string | null;
 	userAgent: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with session data
@@ -51,7 +51,7 @@ export interface AccountTable {
 	idToken: string | null;
 	password: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with account data
@@ -65,7 +65,7 @@ export interface VerificationTable {
 	value: string;
 	expiresAt: ColumnType<Date, string | undefined, never>;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with verification data
@@ -74,13 +74,13 @@ export type NewVerification = Insertable<VerificationTable>;
 export type VerificationUpdate = Updateable<VerificationTable>;
 
 export interface JuniorTable {
-	id: string;
+	id: Generated<string>;
 	schoolIdentifier: string;
 	name: string;
 	description: string;
 	image: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with junior data

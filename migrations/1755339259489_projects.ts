@@ -5,7 +5,7 @@ export async function up(db: Kysely<any>): Promise<void> {
   await db.schema
     .createTable('project')
     .addColumn('id', 'uuid', col => col.primaryKey().notNull().defaultTo(sql`gen_random_uuid()`))
-    .addColumn('juniorId', 'text', col => col.notNull())
+    .addColumn('juniorId', 'uuid', col => col.notNull())
     .addColumn('name', 'text', col => col.notNull())
     .addColumn('description', 'text', col => col.notNull())
     .addColumn('status', 'text', col => col.notNull())
