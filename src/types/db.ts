@@ -1,4 +1,4 @@
-import { ColumnType, Insertable, Selectable, Updateable } from 'kysely';
+import { ColumnType, Generated, Insertable, Selectable, Updateable } from 'kysely';
 
 export interface Database {
 	user: UserTable;
@@ -89,14 +89,14 @@ export type NewJunior = Insertable<JuniorTable>;
 export type JuniorUpdate = Updateable<JuniorTable>;
 
 export interface ProjectTable {
-	id: string;
+	id: Generated<string>;
 	juniorId: string;
 	name: string;
 	description: string;
 	status: string;
 	createdAt: ColumnType<Date, string | undefined, never>;
 	createdBy: string;
-	updatedAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
 
 // Utility types for working with project data
