@@ -72,3 +72,18 @@ export interface VerificationTable {
 export type Verification = Selectable<VerificationTable>;
 export type NewVerification = Insertable<VerificationTable>;
 export type VerificationUpdate = Updateable<VerificationTable>;
+
+export interface JuniorTable {
+	id: string;
+	schoolIdentifier: string;
+	name: string;
+	description: string;
+	image: string | null;
+	createdAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, never>;
+}
+
+// Utility types for working with junior data
+export type Junior = Selectable<JuniorTable>;
+export type NewJunior = Insertable<JuniorTable>;
+export type JuniorUpdate = Updateable<JuniorTable>;
