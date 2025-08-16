@@ -87,3 +87,19 @@ export interface JuniorTable {
 export type Junior = Selectable<JuniorTable>;
 export type NewJunior = Insertable<JuniorTable>;
 export type JuniorUpdate = Updateable<JuniorTable>;
+
+export interface ProjectTable {
+	id: string;
+	juniorId: string;
+	name: string;
+	description: string;
+	status: string;
+	createdAt: ColumnType<Date, string | undefined, never>;
+	createdBy: string;
+	updatedAt: ColumnType<Date, string | undefined, never>;
+}
+
+// Utility types for working with project data
+export type Project = Selectable<ProjectTable>;
+export type NewProject = Insertable<ProjectTable>;
+export type ProjectUpdate = Updateable<ProjectTable>;
