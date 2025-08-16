@@ -26,15 +26,28 @@ docker compose -f compose.yml -f compose.local.yml up -d --build
 
 You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
+## Git workflow
+
+The git workflow that we use is [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+
+In summary:
+
+-   Production code is in the `main` branch, and is automatically deployed. Merging into the `main` branch is restricted.
+-   The `dev` branch holds the code waiting to be deployed to production. Merging to the `dev` branch requires a pull request and at least one review.
+-   New features are added using feature branches (e.g., `feat-visual-home-page`), which are then merged into the `dev` branch.
+
 ## Project structure
 
-To maintain a clean structure, we will follow the Project Structure suggested in the [Bulletproof React repo](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md). Read the page to understand where different files go.
+To maintain a clean structure, we will mostly follow the [Project Structure](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md) suggested in the [Bulletproof React repo](https://github.com/alan2207/bulletproof-react). Read the page to understand where different files go.
+
+The suggestions in the whole repo are pretty good, so read it if you're interested.
 
 ## Basic coding standards
 
 -   The `src/app` folder contains only files related to routing (`layout.tsx`, `page.tsx`, `loading.tsx`, etc.), and no other components. Related components should be put in the `src/components` folder, or the relevant `src/features/[featureName]/components` folder.
 -   Components exported from `page.tsx` files should be short and readable. Break down the page into subcomponents that are implemented in a `components` folder.
--   A file should contain only one component, except for small helper components that can be in the same file.
+-   Try to keep other components simple too, extracting functionality to sub-components, custom hooks or separate functions as appropriate.
+-   A file should contain only one component, except for small helper, presentational components that can be in the same file.
 
 ## User roles
 
