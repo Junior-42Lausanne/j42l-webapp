@@ -11,6 +11,8 @@ export async function up(db: Kysely<any>): Promise<void> {
 			col.notNull().defaultTo(false)
 		)
 		.addColumn('image', 'text')
+		.addColumn('imageSmall', 'text')
+		.addColumn('login', 'text')
 		.addColumn('createdAt', 'timestamp', (col) =>
 			col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`)
 		)
