@@ -10,7 +10,6 @@ export async function signIn() {
 		headers: await headers(),
 		body: {
 			providerId: '42-school',
-			// callbackURL: process.env.BETTER_AUTH_URL,
 		},
 	});
 	console.log(`[!] - data's url = ${data.url}`);
