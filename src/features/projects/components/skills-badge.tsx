@@ -6,10 +6,10 @@ function SkillsBadge() {
 			<Badge variant="secondary" className="bg-orange-500 text-white">
 				JavaScript
 			</Badge>
-			<Badge variant="secondary" className="bg-blue-500 text-white">
+			<Badge variant="secondary" className="bg-neutral-500 text-white">
 				React
 			</Badge>
-			<Badge variant="destructive">
+			<Badge variant="secondary" className="bg-neutral-500 text-white">
 				Next.js
 			</Badge>
 		</div>
