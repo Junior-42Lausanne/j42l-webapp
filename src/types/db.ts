@@ -5,6 +5,7 @@ import {
 	Selectable,
 	Updateable,
 } from 'kysely';
+import type { Role } from 'better-auth/plugins/access';
 
 export interface Database {
 	user: UserTable;
@@ -22,9 +23,10 @@ export interface UserTable {
 	name: string;
 	email: string;
 	emailVerified: boolean;
+	login: string | null;
+	role: Role;
 	image: string | null;
 	imageSmall: string | null;
-	login: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
 	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }

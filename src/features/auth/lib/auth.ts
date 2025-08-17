@@ -12,6 +12,10 @@ export const auth = betterAuth({
 			login: {
 				type: 'string',
 			},
+			role: {
+				type: 'string',
+				defaultValue: 'user',
+			},
 			imageSmall: {
 				type: 'string',
 			},
@@ -42,6 +46,7 @@ export const auth = betterAuth({
 							name: profile.usual_full_name,
 							email: profile.email,
 							login: profile.login,
+							role: 'user',
 							image: profile.image.link,
 							imageSmall: profile.image.versions.small || null,
 						};

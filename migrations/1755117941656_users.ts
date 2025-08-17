@@ -10,9 +10,10 @@ export async function up(db: Kysely<any>): Promise<void> {
 		.addColumn('emailVerified', 'boolean', (col) =>
 			col.notNull().defaultTo(false)
 		)
+		.addColumn('login', 'text')
+		.addColumn('role', 'text', (col) => col.notNull())
 		.addColumn('image', 'text')
 		.addColumn('imageSmall', 'text')
-		.addColumn('login', 'text')
 		.addColumn('createdAt', 'timestamp', (col) =>
 			col.notNull().defaultTo(sql`CURRENT_TIMESTAMP`)
 		)
