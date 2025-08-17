@@ -1,24 +1,16 @@
 import PageTitle from '@/components/page-title';
 import { Button } from '@/components/ui/button';
-import { auth } from '@/features/auth/lib/auth';
+import { assertMinUserRole } from '@/features/auth/actions/actions';
 import ProjectFullDescription from '@/features/projects-details/components/project-full-description';
 import ProjectPosition from '@/features/projects-details/components/project-positions';
 import { User } from 'lucide-react';
-import { headers } from 'next/headers';
-import { redirect } from 'next/navigation';
 
 export default async function ProjectDetailsPage({
 	params,
 }: {
 	params: Promise<{ projectId: string }>;
 }) {
-	const session = await auth.api.getSession({
-		headers: await headers(),
-	});
-
-	if (!session) {
-		redirect('/');
-	}
+	await assertMinUserRole('user');
 
 	const { projectId } = await params;
 

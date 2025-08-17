@@ -1,15 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { auth } from '@/features/auth/lib/auth';
-import { signIn, signOut } from '@/features/auth/actions/actions';
+import { signIn } from '@/features/auth/actions/actions';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { defaultAuthenticatedRoute } from '@/features/auth/constants/constants';
 
 export default async function Home() {
 	const session = await auth.api.getSession({
@@ -19,7 +14,7 @@ export default async function Home() {
 	console.log(session);
 
 	if (session) {
-		redirect(`/projects`);
+		redirect(defaultAuthenticatedRoute);
 	}
 
 	return (

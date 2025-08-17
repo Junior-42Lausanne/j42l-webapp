@@ -2,6 +2,8 @@ import { betterAuth } from 'better-auth';
 import { genericOAuth } from 'better-auth/plugins';
 import { nextCookies } from 'better-auth/next-js';
 import { Pool } from 'pg';
+import z from 'zod';
+import { orderedRoles } from '../constants/constants';
 
 export const auth = betterAuth({
 	database: new Pool({
