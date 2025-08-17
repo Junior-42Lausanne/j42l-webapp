@@ -22,12 +22,8 @@ export const auth = betterAuth({
 					authorizationUrlParams: {
 						scope: 'public',
 					},
-					clientId:
-						'u-s4t2ud-4f3746ce24475536be6b082ace1f4e7d08993980130c37aab3f8246e50230b45',
-					// TODO: use env variable
-					clientSecret:
-						'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',
-					// TODO: use env variable
+					clientId: process.env.BETTER_AUTH_CLIENT_ID || "",
+					clientSecret: process.env.BETTER_AUTH_CLIENT_SECRET,
 					tokenUrl: 'https://api.intra.42.fr/oauth/token',
 					userInfoUrl: 'https://api.intra.42.fr/v2/me',
 					mapProfileToUser(profile) {
