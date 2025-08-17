@@ -1,4 +1,4 @@
-import { betterAuth, string } from 'better-auth';
+import { betterAuth } from 'better-auth';
 import { genericOAuth } from 'better-auth/plugins';
 import { nextCookies } from 'better-auth/next-js';
 import { Pool } from 'pg';
