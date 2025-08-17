@@ -15,7 +15,7 @@ export default async function ProjectDetailsPage({
 			<PageTitle
 				title={`Project ${projectId}`}
 				image={
-					<User className="w-full h-full rounded-full border"></User>
+					<User className="w-full h-full rounded-full border" />
 				}
 				actions={<Button>Edit</Button>}
 			/>
