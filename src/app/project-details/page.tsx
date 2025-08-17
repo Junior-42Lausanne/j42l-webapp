@@ -7,6 +7,7 @@ const ProjectDetails = () => {
 		<>
 			<ProjectDetailsInfo />
 			<ProjectFullDescription />
+			<p className='text-xl mb-3 font-bold'>Positions</p>
 			<ProjectPosition />
 			<ProjectPosition />
 		</>
