@@ -8,6 +8,7 @@ export interface Database {
 	junior: JuniorTable;
 	project: ProjectTable;
 	projectPosition: ProjectPositionTable;
+	application: ApplicationTable;
 }
 
 export interface UserTable {
@@ -121,3 +122,16 @@ export interface ProjectPositionTable {
 export type ProjectPosition = Selectable<ProjectPositionTable>;
 export type NewProjectPosition = Insertable<ProjectPositionTable>;
 export type ProjectPositionUpdate = Updateable<ProjectPositionTable>;
+
+export interface ApplicationTable {
+	id: Generated<string>;
+	userId: string | null;
+	positionId: string;
+	createdAt: ColumnType<Date, string | undefined, never>;
+	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
+}
+
+// Utility types for working with application data
+export type Application = Selectable<ApplicationTable>;
+export type NewApplication = Insertable<ApplicationTable>;
+export type ApplicationUpdate = Updateable<ApplicationTable>;
