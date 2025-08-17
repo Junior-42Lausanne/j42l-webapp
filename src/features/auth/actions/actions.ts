@@ -5,7 +5,6 @@ import { redirect } from 'next/navigation';
 
 export async function signIn() {
 	console.log('[!] - Signing in with 42 OAuth...');
-	console.log(`[!] - BETTER_AUTH_URL = ${process.env.BETTER_AUTH_URL}`);
 	const data = await auth.api.signInWithOAuth2({
 		headers: await headers(),
 		body: {
