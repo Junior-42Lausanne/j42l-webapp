@@ -30,7 +30,6 @@ export const auth = betterAuth({
 						return {
 							id: profile.id.toString(),
 							name: profile.usual_full_name,
-							login: profile.login,
 							email: profile.email,
 							image: profile.image.link,
 						};
