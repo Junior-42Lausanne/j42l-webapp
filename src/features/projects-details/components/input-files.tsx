@@ -17,15 +17,18 @@ const InputFile = () => {
 	}
 
 	return (
-		<div className="grid w-full max-w-sm items-center gap-3 mb-10">
-			{selectedFile.map((name) => (
-				<div key={name}	className="flex flex-1 justify-between">
-					<p>{name}</p>
-					<X onClick={() => removeFile(name)}/>
-				</div>
-			))}
-			<Input onChange={selectFile} type="file" multiple />
-		</div>
+		<>
+			<p className="text-xl mb-3 font-bold">Files</p>
+			<div className="grid w-full max-w-sm items-center gap-3 mb-10">
+				{selectedFile.map((name) => (
+					<div key={name}	className="flex flex-1 justify-between">
+						<p>{name}</p>
+						<X onClick={() => removeFile(name)}/>
+					</div>
+				))}
+				<Input onChange={selectFile} type="file" multiple />
+			</div>
+		</>
 	)
 }
 
