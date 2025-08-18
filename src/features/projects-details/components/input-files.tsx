@@ -1,5 +1,6 @@
 "use client";
 import { Input } from "@/components/ui/input"
+import { X } from 'lucide-react';
 import React from "react";
 
 const InputFile = () => {
@@ -11,14 +12,22 @@ const InputFile = () => {
 		}
 	}
 
+	function removeFile (fileToDelete: string) {
+		setSelectedFile(selectedFile.filter(currentFile => currentFile !== fileToDelete))
+	}
+
 	return (
-		<div className="grid w-full max-w-sm items-center gap-3">
+		<div className="grid w-full max-w-sm items-center gap-3 mb-10">
 			{selectedFile.map((name) => (
-				<p id={name}>{name}</p>
+				<div key={name}	className="flex flex-1 justify-between">
+					<p>{name}</p>
+					<X onClick={() => removeFile(name)}/>
+				</div>
 			))}
-			<Input onChange={selectFile} id="file" type="file" multiple />
+			<Input onChange={selectFile} type="file" multiple />
 		</div>
 	)
 }
 
 export default InputFile;
+
