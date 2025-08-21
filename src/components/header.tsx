@@ -10,7 +10,7 @@ const Header = () => {
 			<Link className="m-auto" href="#">
 				My applications
 			</Link>
-			<Link className="m-auto" href="#">
+			<Link className="m-auto" href="/profile/edit">
 				Profile
 			</Link>
 			<form action={signOut} className="m-auto">
