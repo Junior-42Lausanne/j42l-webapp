@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components/ui/input";
+import Input from "@/components/ui/input";
 import PageTitle from "@/components/page-title";
 import { Button } from "@/components/ui/button";
 import React from "react";
