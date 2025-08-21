@@ -1,4 +1,10 @@
-import { ColumnType, Generated, Insertable, Selectable, Updateable } from 'kysely';
+import {
+	ColumnType,
+	Generated,
+	Insertable,
+	Selectable,
+	Updateable,
+} from 'kysely';
 
 export interface Database {
 	user: UserTable;
@@ -17,6 +23,8 @@ export interface UserTable {
 	email: string;
 	emailVerified: boolean;
 	image: string | null;
+	imageSmall: string | null;
+	login: string | null;
 	createdAt: ColumnType<Date, string | undefined, never>;
 	updatedAt: ColumnType<Date, string | undefined, string | undefined>;
 }
