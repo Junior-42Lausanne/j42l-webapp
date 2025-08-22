@@ -9,17 +9,24 @@ import {
 import { Button } from "@/components/ui/button";
 import SkillsBadge from "@/features/projects/components/skills-badge";
 
-const ProjectPosition = () => {
+type ProjectPositionProps = {
+	jobName: string;
+	projectId: string;
+}
+
+const ProjectPosition = ({jobName, projectId}: ProjectPositionProps) => {
 	return (
 		<div className='mb-10'>
 			<Card>
 				<CardHeader>
-					<CardTitle>Name</CardTitle>
+					<CardTitle>{jobName}</CardTitle>
 					<CardDescription>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque dolore, ullam assumenda, molestiae voluptas iste explicabo, quae harum animi molestias blanditiis qui architecto distinctio porro. Velit quia amet aut assumenda!
 					</CardDescription>
 					<CardAction>
-						<Button>Apply</Button>
+						<a href={`/applications/create?position=${jobName}&projectId=${projectId}`}>
+							<Button>Apply</Button>
+						</a>
 					</CardAction>
 					<CardContent className="px-0">
 						<SkillsBadge />

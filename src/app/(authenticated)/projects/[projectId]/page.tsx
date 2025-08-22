@@ -31,8 +31,8 @@ export default async function ProjectDetailsPage({
 			/>
 			<ProjectFullDescription />
 			<p className="text-xl mb-3 font-bold">Positions</p>
-			<ProjectPosition />
-			<ProjectPosition />
+			<ProjectPosition projectId={projectId} jobName="Developer"/>
+			<ProjectPosition projectId={projectId} jobName="Designer"/>
 		</>
 	);
 }
