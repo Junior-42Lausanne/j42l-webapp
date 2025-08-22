@@ -6,16 +6,14 @@ import TextArea from "@/components/text-area";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
-	CardAction,
 	CardContent,
-	CardDescription,
-	CardFooter,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
 
 const ApplyToJobPage = () => {
 	const position = useSearchParams().get('position');
+	const projectId = useSearchParams().get('projectId');
 	return (
 		<>
 			<PageTitle title={`Apply to be a ${position}`}></PageTitle>
@@ -37,8 +35,12 @@ const ApplyToJobPage = () => {
 					</CardContent>
 				</Card>
 				<div className="flex gap-4">
-					<Button className="flex-1">OK</Button>
-					<Button className="flex-1">Back</Button>
+					<a href="#" className="flex-1">
+						<Button className="w-full">OK</Button>
+					</a>
+					<a href={`/projects/${projectId}`} className="flex-1">
+						<Button className="w-full">Back</Button>
+					</a>
 				</div>
 			</div>
 		</>
